@@ -4,7 +4,7 @@ import { jwtVerify } from 'jose';
 import { Resend } from 'resend';
 import { supabase } from '@/lib/supabase';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+//const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function isAdmin() {
   const store = await cookies();
@@ -23,6 +23,8 @@ export async function POST(request) {
   if (!(await isAdmin())) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const formData = await request.formData();
