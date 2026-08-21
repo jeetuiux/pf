@@ -22,8 +22,8 @@ export const metadata = {
   metadataBase: new URL(BASE),
 
   title: {
-    default: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
-    template: "%s — Sarang | Next.js Developer & Shopify Expert",
+    default: "Indrajeet.in",
+    template: "Indrajeet.in",
   },
   description:
     "Creative developer and designer specializing in Next.js websites, Shopify stores, branding, cinematic video editing, motion graphics, and premium digital experiences.",
@@ -33,28 +33,28 @@ export const metadata = {
     "Cinematic Portfolio", "GSAP Animation", "React Developer",
     "Modern Web Design", "Portfolio Template", "Freelance Developer India"
   ],
-  authors: [{ name: "Sarang", url: BASE }],
-  creator: "Sarang",
-  publisher: "Sarang",
+  authors: [{ name: "Indrajeet.in", url: BASE }],
+  creator: "Indrajeet",
+  publisher: "Indrajeet",
 
   openGraph: {
     type: "website",
     locale: "en_US",
     url: BASE,
-    siteName: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
-    title: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
+    siteName: "Indrajeet.in",
+    title: "Indrajeet.in",
     description: "Creative developer and designer specializing in Next.js websites, Shopify stores, branding, cinematic video editing, motion graphics, and premium digital experiences.",
     images: [{
       url: "/og-image.png",
       width: 1200,
       height: 630,
-      alt: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
+      alt: "Indrajeet.in",
     }],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
+    title: "Indrajeet.in",
     description: "Creative developer and designer specializing in Next.js websites, Shopify stores, branding, cinematic video editing, motion graphics, and premium digital experiences.",
     images: ["/og-image.png"],
     creator: "@sarang",

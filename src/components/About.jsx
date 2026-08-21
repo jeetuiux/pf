@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import BlurText from "./BlurText";
-import { SECTION, HEADING, BIO, RESUME_URL, TECH, CREATIVE, EXPERIENCE } from "@/app/about/content";
+import { SECTION, HEADING, BIO, RESUME_URL, TECH, CREATIVE, EXPERIENCE, ProductDesignUx, ProductAgile, Tools, Frontend } from "@/app/about/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,7 +62,7 @@ export default function About({ standalone = false }) {
         <div className="about-img absolute inset-0 z-0">
           <Image
             src="/photo/about me.webp"
-            alt="Sarang"
+            alt="Indrajeet"
             fill
             className="object-cover object-center"
             priority
@@ -76,9 +76,13 @@ export default function About({ standalone = false }) {
 
         {/* Left Bio */}
         <div className={`w-full lg:w-[55%] max-w-2xl flex flex-col ${standalone ? "ml-auto lg:pr-10 text-right items-end" : "mr-auto text-left items-start"}`}>
+          
+          
+          
           <p className="about-label text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-6 font-medium">
             {SECTION.label}
           </p>
+          
 
           <h2
             className="about-h font-black tracking-tighter leading-[0.88] mb-8"
@@ -88,18 +92,54 @@ export default function About({ standalone = false }) {
             <span className="block text-white">{HEADING.line2}</span>
             <span className="block ghost">{HEADING.line3}</span>
           </h2>
+          <h1>Product Design & UX</h1>
+          <br />
 
-          {BIO.map((text, i) => (
-            <BlurText
-              key={i}
-              text={text}
-              delay={25}
-              animateBy="words"
-              direction="bottom"
-              stepDuration={0.22}
-              className={`about-p text-sm md:text-base text-white/50 max-w-lg ${i < BIO.length - 1 ? "mb-6" : "mb-4"} font-light leading-relaxed ${standalone ? "text-right" : ""}`}
-            />
-          ))}
+          <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-start"}`}>
+                {ProductDesignUx.map((s) => (
+                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/50 rounded-full text-[10px] text-white/80 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
+                    {s.name}
+                  </span>
+                ))}
+          </div>
+          <br />
+
+          <h1>Product & Agile</h1>
+          <br />
+
+          <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-start"}`}>
+                {ProductAgile.map((s) => (
+                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/50 rounded-full text-[10px] text-white/80 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
+                    {s.name}
+                  </span>
+                ))}
+          </div>
+          <br />
+
+          <h1>Tool & AI</h1>
+          <br />
+
+          <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-start"}`}>
+                {Tools.map((s) => (
+                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/50 rounded-full text-[10px] text-white/80 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
+                    {s.name}
+                  </span>
+                ))}
+          </div>
+          <br />
+
+          <h1>Frontend & Technical</h1>
+          <br />
+
+          <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-start"}`}>
+                {Frontend.map((s) => (
+                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/50 rounded-full text-[10px] text-white/80 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
+                    {s.name}
+                  </span>
+                ))}
+          </div>
+          <br />
+          
 
           <div className={`about-p mt-6 ${standalone ? "flex justify-end" : "flex justify-start"}`}>
             <a
@@ -113,55 +153,6 @@ export default function About({ standalone = false }) {
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-          </div>
-        </div>
-
-        {/* Right Skills & Experience */}
-        <div className={`w-full lg:w-[40%] max-w-md mt-10 lg:mt-0 flex flex-col ${standalone ? "mr-auto lg:items-start lg:text-left" : "ml-auto items-end text-right"}`}>
-          <div className="about-p w-12 h-px bg-white/15 mb-8 lg:mb-10" />
-
-          <div className="flex flex-col gap-10 w-full">
-            <div className="w-full">
-              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-right"}`}>
-                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Tech I Work With</span>
-              </p>
-              <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-end"}`}>
-                {TECH.map((s) => (
-                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
-                    <s.icon className="w-3 h-3 transition-all duration-300 fill-transparent stroke-current stroke-[1.5px] group-hover:fill-current group-hover:stroke-transparent" />
-                    {s.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-full">
-              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-right"}`}>
-                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Creative Tools</span>
-              </p>
-              <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-end"}`}>
-                {CREATIVE.map((s) => (
-                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
-                    <s.icon className="w-3 h-3 transition-all duration-300 fill-transparent stroke-current stroke-[1.5px] group-hover:fill-current group-hover:stroke-transparent" />
-                    {s.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-full">
-              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-right"}`}>
-                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Experience</span>
-              </p>
-              <div className={`flex flex-col gap-4 mt-2 ${standalone ? "items-start" : "items-end"}`}>
-                {EXPERIENCE.map((exp, i) => (
-                  <div key={i} className="about-skill">
-                    <p className="text-white/80 text-sm font-medium">{exp.role}</p>
-                    <p className="text-white/40 text-[10px] tracking-widest uppercase mt-1">{exp.period}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
