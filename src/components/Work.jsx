@@ -155,9 +155,7 @@ export default function Work() {
               </div>
             </Link>
           ))}
-          
         </div>
-
       </div>
     </section>
   );

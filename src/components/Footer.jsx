@@ -3,10 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { trackClick } from "@/lib/trackClick";
 
-const LINKS = [
-  { label: "About",   href: "/about"   },
-  { label: "Contact", href: "/contact" },
-];
+
 
 const SOCIAL_KEYS = [
   { key: "instagram", label: "Instagram" },
@@ -69,46 +66,14 @@ export default function Footer() {
         {/* name + tagline */}
         <div>
           <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">
-            Creative Developer
+            Creative Designer
           </p>
           <h2
             className="font-black tracking-tighter leading-[0.85]"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
           >
-            <span className="block text-white">Sarang</span>
+            <span className="block text-white">Indrajeet</span>
           </h2>
-        </div>
-
-        {/* nav + socials */}
-        <div className="flex flex-col gap-8 md:items-end">
-          <nav className="flex gap-8 text-[11px] uppercase tracking-[0.3em] font-medium">
-            {LINKS.map(({ label, href }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-white/40 hover:text-[#ff6b1a] transition-colors duration-300"
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-
-          {socials.length > 0 && (
-            <div className="flex flex-wrap gap-8 text-[11px] uppercase tracking-[0.3em] font-medium">
-              {socials.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackClick(`social-${label.toLowerCase()}`, href)}
-                  className="text-white/25 hover:text-white/70 transition-colors duration-300"
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
-          )}
         </div>
       </div>
 
@@ -121,10 +86,10 @@ export default function Footer() {
           className="text-[10px] text-white/20 tracking-widest"
           style={{ fontFamily: '"Times New Roman", Times, serif', fontStyle: "italic" }}
         >
-          sarangwalle@gmail.com
+          indrajeetjadhav8107gmail.com
         </p>
         <p className="text-[10px] text-white/15 tracking-[0.3em] uppercase">
-          © {new Date().getFullYear()} Sarang Walle. All rights reserved.
+          © {new Date().getFullYear()} Indrajeet Jadhav. All rights reserved.
         </p>
       </div>
 
