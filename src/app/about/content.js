@@ -16,15 +16,15 @@ import {
   TbBrandAdobeAfterEffect, TbBrandAdobePremier,
   TbBrandAdobePhotoshop, TbBrandAdobeIllustrator,
 } from "react-icons/tb";
-import { Line3 } from "three";
+//import { Line3 } from "three";
 
 export const SECTION = {
- // label: "About Me",
+  label: "About Me",
 };
 
 export const HEADING = {
   line1: "Skills",
-    // ghost (outline) style
+   
 };
 
 

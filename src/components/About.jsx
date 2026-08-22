@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import BlurText from "./BlurText";
-import { SECTION, HEADING, BIO, RESUME_URL, TECH, CREATIVE, EXPERIENCE, ProductDesignUx, ProductAgile, Tools, Frontend } from "@/app/about/content";
+import { SECTION, HEADING, RESUME_URL, ProductDesignUx, ProductAgile, Tools, Frontend } from "@/app/about/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,7 +83,6 @@ export default function About({ standalone = false }) {
             {SECTION.label}
           </p>
           
-
           <h2
             className="about-h font-black tracking-tighter leading-[0.88] mb-8"
             style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}
