@@ -1,8 +1,8 @@
 export default function manifest() {
   return {
-    name:             "Sarang — Creative Developer",
-    short_name:       "Sarang",
-    description:      "Cinematic digital experiences at the intersection of design and code.",
+    name:             "Indrajeet — Creative Designer",
+    short_name:       "Indrajeet",
+    description:      "Enterprise UX designer",
     start_url:        "/",
     display:          "standalone",
     background_color: "#080808",
