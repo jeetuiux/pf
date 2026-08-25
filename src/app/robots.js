@@ -11,4 +11,4 @@ export default function robots() {
     },
     sitemap: "https://jeetux.vercel.app/sitemap.xml",
   };
-}j
+}
