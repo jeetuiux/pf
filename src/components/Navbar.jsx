@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import ContactPopup from "./ContactPopup";
 
+
 const LINKS = [
   { label: "Home", href: "/" },
   { label: "Contact", href: "/contact" },
