@@ -9,11 +9,11 @@ import ContactPopup from "./ContactPopup";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const LINKS = [
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+// const LINKS = [
+//   { label: "Projects", href: "/projects" },
+//   { label: "About", href: "/about" },
+//   { label: "Contact", href: "/contact" },
+// ];
 
 export default function Navbar() {
   const navRef    = useRef(null);
@@ -81,6 +81,7 @@ export default function Navbar() {
 
         {/* Logo + back */}
         <div className="relative flex items-center gap-5">
+          <h1>Indrajeet.in</h1>
           {pathname !== "/" && (
             <Link href={getBackLink(pathname)} className="flex items-center gap-2 text-white/40 hover:text-[#ff6b1a] transition-colors duration-300 group">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:-translate-x-1">
@@ -89,19 +90,20 @@ export default function Navbar() {
               <span className="text-[10px] tracking-[0.35em] uppercase font-medium">{getBackLabel(pathname)}</span>
             </Link>
           )}
-          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
+          {/* <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
             <Image
               src="/photo/logo navbar inverse.png"
               alt="Sarang — Portfolio Designer & Creative Developer"
               width={120} height={40}
               className="h-9 w-auto"
               priority
+
             />
-          </Link>
+          </Link> */}
         </div>
 
         {/* Desktop links */}
-        <ul className="relative hidden md:flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] font-medium">
+        {/* <ul className="relative hidden md:flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] font-medium">
           {LINKS.map(({ label, href }) => {
             const active = pathname === href;
             return (
@@ -121,7 +123,7 @@ export default function Navbar() {
               Start Now
             </button>
           </li>
-        </ul>
+        </ul> */}
 
         {/* Mobile hamburger */}
         <button

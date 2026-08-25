@@ -19,6 +19,46 @@
   .admin-cursor input[type="text"], .admin-cursor input[type="password"], .admin-cursor textarea { cursor: text !important; }
 }
 
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+
+  .admin-cursor,
+  .admin-cursor * {
+    cursor: default !important;
+  }
+
+  .admin-cursor a,
+  .admin-cursor button,
+  .admin-cursor input,
+  .admin-cursor select,
+  .admin-cursor textarea {
+    cursor: pointer !important;
+  }
+
+  .admin-cursor input[type="text"],
+  .admin-cursor input[type="password"],
+  .admin-cursor textarea {
+    cursor: text !important;
+  }
+
+  /* Normal cursor on case-study pages */
+  .project-page,
+  .project-page * {
+    cursor: auto !important;
+  }
+
+  .project-page a,
+  .project-page button {
+    cursor: pointer !important;
+  }
+}
+
+
+
+
+
 html, body {
   margin: 0;
   padding: 0;

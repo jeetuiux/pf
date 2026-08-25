@@ -14,7 +14,7 @@ const CATEGORIES = [
     title: "Avocet Mobile Application",
     description:
       "Designed enterprise mobile experience that simplifies complex field workflows, improves data visibility, and supports seamless online & offline operations.",
-    href: "/projects?cat=website",
+    href: "/projects",
   },
   {
     num: "02",
@@ -22,8 +22,7 @@ const CATEGORIES = [
     title: "Time Booking Application",
     description:
       "A character-driven UX story that explores the people, problems, and design decisions behind a simpler time-booking experienc",
-    
-    href: "/projects?cat=design",
+    href: "/project/ifs-time-booking",
   },
   {
     num: "03",
@@ -32,7 +31,7 @@ const CATEGORIES = [
     description:
       "A focused enterprise UX case study exploring how user management workflows can be simplified through clearer information architecture, intuitive interactions, and scalable design patterns.",
     
-    href: "/projects?cat=video",
+    href: "/project/avalon-user-management",
   },
 
   {
@@ -42,7 +41,7 @@ const CATEGORIES = [
     description:
       "A data-driven enterprise platform for automotive validation, vehicle testing, and test data management—designed to help engineering teams organize, analyze, and validate complex vehicle data.",
     
-    href: "/projects?cat=video",
+    href: "/project/brix",
   },
 ];
 
@@ -95,19 +94,6 @@ export default function Work() {
             >
               {SECTION.heading}
             </h2>
-
-            {/* Category pills — decorative only */}
-            <div className="flex flex-wrap gap-2 lg:pb-2">
-              {["Website", "Photo / Poster Design", "Video"].map((cat) => (
-                <Link
-                  key={cat}
-                  href={`/projects${cat !== "All" ? `?cat=${cat.toLowerCase().split(" ")[0]}` : ""}`}
-                  className="px-4 py-2 rounded-full text-[10px] md:text-xs font-medium tracking-widest uppercase transition-all duration-300 bg-transparent text-white/40 border border-white/10 hover:text-white hover:border-white/30"
-                >
-                  {cat}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -117,6 +103,8 @@ export default function Work() {
             <Link
               key={cat.num}
               href={cat.href}
+                target="_blank"
+                rel="noopener noreferrer"
               className="work-item group relative flex items-start gap-8 py-10 md:py-14 border-b border-white/8 hover:border-white/20 transition-all duration-500"
             >
               {/* Left orange accent bar */}
