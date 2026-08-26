@@ -24,7 +24,7 @@ export const metadata = {
   metadataBase: new URL(BASE),
 
   title: {
-    default: "Indrajeet Jadhav — Product Designer & UX Designer",
+    default: "Indrajeet.in",
     template: "%s | Indrajeet Jadhav",
   },
 
@@ -96,12 +96,12 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: "/photo/favicon.png",
+        url: "/photo/JeetLogo.svg",
         type: "image/png",
       },
     ],
-    apple: "/photo/favicon.png",
-    shortcut: "/photo/favicon.png",
+    apple: "/photo/JeetLogo.svg",
+    shortcut: "/photo/JeetLogo.svg",
   },
 
   alternates: {

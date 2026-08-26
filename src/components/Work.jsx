@@ -14,7 +14,7 @@ const CATEGORIES = [
     title: "Avocet Mobile Application",
     description:
       "Designed enterprise mobile experience that simplifies complex field workflows, improves data visibility, and supports seamless online & offline operations.",
-    href: "/projects",
+    href: "/project/avocet-mob",
   },
   {
     num: "02",

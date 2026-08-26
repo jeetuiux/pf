@@ -48,7 +48,7 @@ export default function Hero() {
     >
       <div className="relative z-10 max-w-5xl">
         <p className="hero-label text-[10px] md:text-xs text-[#ff6b1a] tracking-[0.2em] uppercase font-bold mb-6">
-          Enterprise User Experience Designer <br />Product Designer
+          Enterprise User Experience Designer
         </p>
 
         <h1
