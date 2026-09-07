@@ -96,12 +96,12 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: "/photo/JeetLogo.svg",
+        url: "/photo/Logo_Browser.svg",
         type: "image/png",
       },
     ],
-    apple: "/photo/JeetLogo.svg",
-    shortcut: "/photo/JeetLogo.svg",
+    apple: "/photo/Logo_Site.svg",
+    shortcut: "/photo/Logo_Site.svg",
   },
 
   alternates: {
