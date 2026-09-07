@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Cursor from "@/components/Cursor";
 
-export default function IFSTimeBooking() {
+export default function AvocetMobile() {
   return (
     <main className="relative min-h-screen overflow-hidden text-white"
   style={{
@@ -1081,7 +1081,7 @@ export default function IFSTimeBooking() {
         <div className="max-w-4xl">
 
           <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-5">
-            IFS Time Booking
+            Avocet Mobile 
           </p>
 
           <h2
